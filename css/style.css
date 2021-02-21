@@ -1,0 +1,1091 @@
+@charset "UTF-8";
+
+/*base*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.7;
+    color: #363434;
+    background-color: #f4eeed;
+    letter-spacing: .05rem;
+}
+
+nav,
+footer {
+    font-family: 'Noto Serif JP', serif;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    margin-top: 1rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #363434;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto 0 calc(180px + 4%);
+    padding: 0 4%;
+    /*左右に4%余白*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*-----------------------------
+
+header
+
+-----------------------------*/
+
+.page-nav-h1 {
+    background-color: #fff;
+    width: 180px;
+    position: fixed;
+    left: 4%;
+    top: 0;
+    text-align: center;
+}
+
+header li {
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 43px;
+}
+
+header li:last-child {
+    margin-bottom: 30px;
+}
+
+.main-nav a {
+    display: block;
+}
+
+.main-nav a:hover {
+    color: #1f1e2c;
+    opacity: .5;
+    transition: .3s ease;
+}
+
+/* 通常時はjpを非表示にする */
+.main-nav a .jp {
+    display: none;
+}
+
+/* ホバー時はenを非表示にする */
+.main-nav a:hover .normal {
+    display: none;
+    transition: .3s ease;
+}
+
+/* ホバー時にjpを表示する */
+.main-nav a:hover .jp {
+    display: block;
+    transition: .3s ease;
+}
+
+h1 a img {
+    width: 70px;
+    margin: 30px auto 20px;
+}
+
+/*ハンバーガーボタン*/
+.page-btn,
+.page-btn-close {
+    display: none;
+}
+
+/*上に戻るボタン*/
+.pagetop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 20px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    opacity: .5;
+    display: block;
+}
+
+.pagetop:hover {
+    opacity: 1;
+    transition: .3s ease;
+}
+
+.pagetop span {
+    line-height: 40px;
+}
+
+
+/*-----------------------------
+
+top-box
+
+-----------------------------*/
+
+.top h2 {
+    display: block;
+    text-align: right;
+    font-size: 5.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-top: 10px;
+    line-height: 9rem;
+    letter-spacing: 1rem;
+}
+
+#top-down {
+    display: none;
+}
+
+.top::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: url(../image/marble.jpg);
+    /*四角形傾斜*/
+    transform: skewY(45deg);
+    transform-origin: bottom left;
+    z-index: -5;
+}
+
+#top-logo {
+    width: 6rem;
+    display: block;
+    margin-left: auto;
+    padding-right: 18px;
+}
+
+/*-----------------------------
+
+About CASA
+
+-----------------------------*/
+
+div#about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.about-text-img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.about-text,
+.about-img {
+    width: 49%;
+}
+
+.about-text p {
+    padding: 0 2rem;
+}
+
+.about-text p:first-child {
+    margin-bottom: 2rem;
+    padding: 0 2rem 2rem;
+    border-bottom: 1px solid #363434;
+}
+
+.about-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 40rem;
+}
+
+/*ボタン*/
+
+.btn-box {
+    align-self: flex-end;
+    margin: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    width: 8rem;
+    line-height: 4rem;
+    text-align: center;
+    overflow: hidden;
+    background: #363434;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
+    animation: move 3s infinite;
+    border: 1px solid #363434;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+@keyframes move {
+    0% {
+        transform: translate(2px, 0px);
+    }
+
+    5% {
+        transform: translate(-2px, 0px);
+    }
+
+    10% {
+        transform: translate(2px, 0px);
+    }
+
+    15% {
+        transform: translate(-2px, 0px);
+    }
+
+    20% {
+        transform: translate(2px, 0px);
+    }
+
+    25% {
+        transform: translate(-2px, 0px);
+    }
+
+    30% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.btn-box a:hover{
+    animation: none;
+    background: #fff;
+    color: #363434;
+    font-size: 1rem;
+}
+
+.btn-box i {
+    padding-left: .5rem;
+}
+
+/* 通常時jpを非表示にする */
+.btn-box a .jp {
+    display: none;
+}
+
+/* ホバー　時enを非表示にする */
+.btn-box a:hover .normal {
+    display: none;
+}
+
+/* ホバー時jpを表示する */
+.btn-box a:hover .jp {
+    display: block;
+}
+
+/*-----------------------------
+
+Facilities
+
+-----------------------------*/
+
+div#facil {
+    display: flex;
+    flex-direction: column;
+}
+
+.facil-text-img {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.facil-text-img:first-of-type {
+    margin-top: 1rem;
+}
+
+.facil-text-img:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.facil-text,
+.facil-img {
+    width: 50%;
+}
+
+.facil-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#facil h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #363434;
+    font-size: 1.9rem;
+    font-weight: lighter;
+    letter-spacing: 0.05;
+    border-bottom: 1px solid #363434;
+    text-align: center;
+}
+
+#facil h3 + p {
+    padding: 2rem;
+}
+
+.facil-img img {
+    object-fit: cover;
+    height: 22rem;
+    width: 100%;
+    filter: grayscale(.1);
+}
+
+/*-----------------------------
+
+User's voice
+
+-----------------------------*/
+
+div#voice {
+    display: flex;
+    flex-direction: column;
+}
+
+.voice-sub {
+    width: 19rem;
+    height: 19rem;
+    border-radius: 50%;
+    text-align: center;
+    background: #fff;
+    font-family: 'Noto Serif JP', serif;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voice-sub p:nth-child(1) {
+    font-size: 6rem;
+    letter-spacing: 0;
+    margin-top: -2rem;
+    font-family: 'Crimson Text', serif;
+}
+
+.voice-sub p:nth-child(2) {
+    margin-top: -2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.voice-sub p:nth-child(3),
+.voice-sub p:nth-child(4) {
+    font-size: .7rem;
+}
+
+.voice-sub p span {
+    font-size: 1.3rem;
+}
+
+.voice-box {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.voice-text {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #363434;
+}
+
+.voice-text p:first-child {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.voice-text p + p {
+    text-align: right;
+}
+
+
+/*-----------------------------
+
+Awards
+
+-----------------------------*/
+
+div#awards {
+    display: flex;
+    flex-direction: column;
+}
+
+div#awards h2 {
+    margin-bottom: 1rem;
+}
+
+.awards-img-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.awards-img {
+    width: 35%;
+    min-width: 20rem;
+}
+
+.awards-text {
+    width: 61%;
+    min-width: 38rem;
+}
+
+.awards-text p:first-of-type {
+    margin-bottom: 1rem;
+    font-family: 'Noto Serif JP', serif;
+    color: #363434;
+    font-size: 2.2rem;
+    font-weight: lighter;
+    border-bottom: 1px solid #363434;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.awards-text span {
+    display: inline-block;
+
+}
+
+.awards-text .no1 {
+    font-weight: bold;
+}
+
+.awards-sm {
+    font-size: 1.5rem;
+}
+
+.awards-text ul:first-of-type {
+    margin-bottom: 1rem;
+}
+
+.awards-text li,
+.awards-year {
+    text-align: center;
+}
+
+.awards-year {
+    margin-bottom: .5rem;
+}
+
+.br-sp {
+    display: none;
+}
+
+
+/*-----------------------------
+
+Q&A
+
+-----------------------------*/
+
+.q-list {
+    width: 80%;
+    margin: 0 0 0 auto;
+}
+
+.q-list summary {
+    cursor: pointer;
+    outline: none;
+    margin-bottom: .5rem;
+}
+
+.q-list details {
+    margin-bottom: 1.8rem;
+}
+
+/*-----------------------------
+
+Join us
+
+-----------------------------*/
+
+#join {
+    min-height: 50vh;
+}
+
+.join-form {
+    width: 80%;
+    margin: 0 0 0 auto;
+}
+
+label {
+    margin-bottom: .5rem;
+    display: block;
+    /*縦ならべ*/
+}
+
+.join-policy label {
+    cursor: pointer;
+}
+
+.join-policy details {
+    margin-bottom: 1rem;
+    display: block;
+    font-size: .8rem;
+    margin-left: 1.5rem;
+}
+
+.join-policy summary {
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 14rem;
+    background: #fff;
+    margin-bottom: 1rem;
+    line-height: 1;
+    padding: .5rem;
+    border-radius: 5%;
+    border: 1px solid rgba(215, 215, 215);
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    line-height: 1;
+    padding: 1rem;
+    background-color: rgba(160, 160, 160);
+    border-radius: 5%;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0 0 2px #363434;
+    background-color: rgba(190, 190, 190);
+    transition: .2s ease;
+}
+
+/*-----------------------------
+
+footer
+
+-----------------------------*/
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#footer-add,
+#footer-tel{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#footer-tel{
+    margin-bottom: 1rem;
+}
+
+.sns{
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+    margin: 1.5rem auto;
+}
+
+.sns i{
+    cursor: pointer;
+    width: 2rem;
+    font-size: 2rem;
+    color: rgba(150,150,150);
+}
+
+/*-----------------------------
+
+共通　tablet
+
+-----------------------------*/
+
+@media (max-width: 870px) {
+
+    .wrapper {
+        max-width: 870px;
+        margin: 0 auto;
+    }
+
+    /*ハンバーガーメニュー*/
+
+    .page-nav-h1 {
+        margin-left: -4%;
+        margin-bottom: 50px;
+        z-index: 500;
+        background-color: rgba(255, 255, 255, .9);
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease;
+        height: 60%;
+        position: fixed;
+        top: auto;
+        bottom: 0;
+    }
+
+    nav li {
+        padding: 0 3rem;
+    }
+
+    nav a {
+        display: inline-block;
+        text-align: center;
+        border-bottom: 1px solid #363434;
+        line-height: 1.8rem;
+        margin: 0 auto;
+        width: 30%;
+    }
+
+    h1 {
+        width: 60px;
+        margin: 0 auto;
+    }
+
+    h1 a {
+        width: 60px;
+    }
+
+    h1 a img {
+        width: 100%;
+        display: block;
+        margin: 2.4rem 0;
+    }
+
+    .open .page-nav-h1 {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transition: .3s ease;
+    }
+
+    /*ハンバーガーボタン*/
+
+    .main-nav-btn {
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        background-color: #fff;
+        bottom: 0;
+        margin: 0;
+        margin-left: -4%;
+        z-index: 900;
+    }
+
+    .page-btn,
+    .page-btn-close,
+    .pagetop {
+        display: inline-block;
+        border: none;
+        font-size: 34px;
+        width: 34px;
+        line-height: 50px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .pagetop span {
+        color: rgba(150, 150, 150);
+    }
+
+    .pagetop {
+        position: absolute;
+        right: 12px;
+        opacity: 1;
+    }
+
+    .page-btn,
+    .page-btn-close {
+        position: absolute;
+        left: calc(50% - 17px);
+        color: rgba(150, 150, 150);
+    }
+
+    .page-btn {
+        visibility: visible;
+        opacity: 1;
+        transition: .3s ease;
+    }
+
+    .page-btn-close {
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    .open .page-btn {
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    .open .page-btn-close {
+        visibility: visible;
+        opacity: 1;
+        transition: .3s ease;
+    }
+
+/*-----------------------------
+
+top　tablet
+
+-----------------------------*/
+
+    .top {
+        min-height: calc(100vh - 50px);
+        background-image: url(../image/pink.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .top h2 {
+        font-size: 4.5rem;
+        padding-top: 3rem;
+        color: #fff;
+    }
+
+    #top-down {
+        display: block;
+        cursor: pointer;
+        width: 6rem;
+        margin: 0 auto;
+    }
+
+    .top i {
+        display: block;
+        font-size: 4rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    #top-logo {
+        width: 8rem;
+        padding-bottom: 2rem;
+        padding-right: 1.3rem;
+    }
+
+
+/*-----------------------------
+
+About CASA tablet
+
+-----------------------------*/
+
+    .about-img img {
+        height: 33rem;
+    }
+    
+    .btn-box a:hover{
+        background: #363434;
+        color: #fff;
+        font-size: 1.2rem;
+}
+
+/* ホバー時enを表示 */
+    .btn-box a:hover .normal {
+        display: block;
+}
+
+/* ホバー時jpを非表示 */
+    .btn-box a:hover .jp {
+        display: none;
+}
+
+/*-----------------------------
+
+Join us　tablet
+
+-----------------------------*/
+
+    #join {
+        min-height: calc(100vh - 50px - 16rem);
+    }
+
+/*-----------------------------
+
+footer　tablet
+
+-----------------------------*/
+
+    footer {
+        margin-bottom: 50px;
+    }
+}
+
+/*-----------------------------
+
+共通　mobile
+
+-----------------------------*/
+
+@media (max-width: 580px) {
+
+    .wrapper {
+        max-width: 580px;
+    }
+
+    nav a {
+        width: auto;
+    }
+
+    .page-nav-h1 {
+        height: 70%;
+    }
+    
+    h2{
+        text-align: center;
+    }
+    
+    p,
+    summary{
+        font-size: .9rem;
+    }
+
+/*-----------------------------
+
+top　mobile
+
+-----------------------------*/
+
+    .top h2 {
+        font-size: 2.3rem;
+        line-height: 3.6rem;
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    #top-down {
+        padding: 0;
+    }
+    #top-logo {
+        width: 2.8rem;
+        margin: 0;
+        margin-left: auto;
+        padding: 1rem 1rem 0 0;
+    }
+
+    .top i {
+        font-size: 2.5rem;
+    }
+
+/*-----------------------------
+
+About CASA mobile
+
+-----------------------------*/
+
+    div#about {
+        display: block;
+    }
+
+    .about-text-img {
+        display: block;
+    }
+
+    .about-text,
+    .about-img {
+        width: 100%;
+    }
+
+    .about-text p:last-child {
+        margin-bottom: 2rem;
+    }
+
+    .about-img img {
+        height: 18rem;
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .btn {
+        display: block;
+        margin: 0 auto 2.5rem;
+    }
+
+/*-----------------------------
+
+Facilities mobile
+
+-----------------------------*/
+
+    div#facil {
+        display: block;
+    }
+
+    .facil-text-img {
+        display: block;
+    }
+
+    .facil-text,
+    .facil-img {
+        width: 100%;
+    }
+
+    #facil h3 {
+        font-size: 1.6rem;
+    }
+
+    .facil-img img {
+        height: 16rem;
+    }
+
+/*-----------------------------
+
+User's voice mobile
+
+-----------------------------*/
+
+    div#voice {
+        display: block;
+    }
+
+    .voice-sub {
+        width: 17rem;
+        height: 17rem;
+        margin-top: 1rem;
+    }
+
+    .voice-sub p:nth-child(1) {
+        font-size: 5rem;
+    }
+
+    .voice-box {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    .voice-text {
+        padding: 0;
+        margin: 0 1rem 2rem;
+    }
+
+    .voice-text p:first-child {
+        margin-bottom: 0;
+    }
+
+    .voice-text p + p {
+        margin-bottom: .5rem;
+    }
+
+/*-----------------------------
+
+Awards mobile
+
+-----------------------------*/
+
+    div#awards {
+        display: block;
+    }
+
+    .awards-img-text {
+        display: block;
+    }
+
+    .awards-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .awards-text {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .awards-text p:first-of-type {
+        font-size: 1.3rem;
+        padding: 0;
+        padding-top: .5rem;
+        text-align: center;
+        line-height: 1.8rem;
+    }
+
+    .awards-sm {
+        font-size: 1.1rem;
+        padding-bottom: 1rem;
+    }
+
+    .awards-year {
+        margin-top: 1rem;
+    }
+
+    .br-sp {
+        display: block;
+    }
+    
+    .awards-text .no1 {
+        font-size: 1.2rem;
+}
+    
+/*-----------------------------
+
+Q&A mobile
+
+-----------------------------*/
+
+    #q h2 {
+        margin-bottom: 1rem;
+    }
+
+    .q-list {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+/*-----------------------------
+
+Join us mobile
+
+-----------------------------*/
+    
+    .join-form {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        max-width: none;
+    }
+
+    input[type="submit"] {
+        display: block;
+        margin: 0 auto;
+    }
+
+}

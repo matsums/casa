@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CASA</title>
+    <meta name="description" content="女性のためのコワーキングスペース">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--css-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!--リセットcss-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Noto+Serif+JP:wght@500&family=Crimson+Text&family=Montserrat:wght@200&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <!--js-->
+    <script src="https://kit.fontawesome.com/2bd75be9f4.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+
+<header class="wrapper page">
+    <div class="main-nav-box">
+        <div class="page-nav-h1">
+            <h1><a href="#"><img src="image/logo.png" alt="CASA"></a></h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#about"><span class="normal">About CASA</span><span class="jp">CASAについて
+                            </span></a></li>
+                    <li><a href="#facil"><span class="normal">Facilities</span><span class="jp">施設のご案内
+                            </span></a></li>
+                    <li><a href="#voice"><span class="normal">User&#39;s voice</span><span class="jp">会員様の声
+                            </span></a></li>
+                    <li><a href="#awards"><span class="normal">Awards</span><span class="jp">受賞歴
+                            </span></a></li>
+                    <li><a href="#q"><span class="normal">Q&amp;A</span><span class="jp">よくあるご質問
+                            </span></a></li>
+                    <li><a href="#join"><span class="normal">Join us</span><span class="jp">会員登録
+                            </span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-nav-btn">
+            <button type="button" class="page-btn" onclick="myFunc()"><span class="fas fa-bars" title=""></span></button>
+            <button type="button" class="page-btn-close" onclick="myFunc()"><span class="fas fa-times" title=""></span></button>
+            <button type="button" id="page_top" class="pagetop"><a href="#"><span class="fas fa-chevron-up" title=""></span></a></button>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container wrapper">
+        <div class="top">
+            <h2>Co-working<br>space<br>created<br>for women</h2>
+            <img id="top-logo" src="image/logo_white.png" alt="CASAのロゴ">
+            <a id="top-down" href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+        <!--About CASA-->
+        <div id="about">
+            <h2>About CASA</h2>
+            <div class="about-text-img">
+                <div class="about-text">
+                    <p>スペイン語で「CASA」&#61;「家」。家のように快適で特別な空間を提供したいという創業者の想いが込められています。ここには仕事や交流のための快適なスペースと充実したサービスが全てそろっています。新しい働き方・やりがいをCASAで一緒に見つけませんか&#63;</p>
+                    <p>「CASA（カーサ）」は、パリで生まれた、女性のためのコワーキングスペース＆コミュニティスペースです。出産を機に専業主婦をしていたアリオン・コティヤールによって2018年に創設されました。現在はパリに3ヶ所、ニューヨークに1ヶ所、サンフランシスコに1ヶ所拠点を持ち、2019年に日本で最初の拠点が福岡天神にオープンしました。</p>
+                </div>
+                <div class="about-img">
+                    <img src="image/pink2.jpg" alt="ピンクのソファがあるエントランス">
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="#join" class="btn js_h"><span class="normal">Join us<i class="fas fa-chevron-right"></i></span><span class="jp">会員登録<i class="fas fa-chevron-right"></i></span></a>
+            </div>
+        </div>
+        <!--Facilities-->
+        <div id="facil">
+            <h2>Facilities</h2>
+            <div class="facil-text-img">
+                <div class="facil-text">
+                    <h3>Meeting room</h3>
+                    <p>広々としたミーティングルームは最大20名でご利用いただけます。モニターとホワイトボードもご利用可能です。予約制になっておりますのでフロントもしくはオンラインにてお早めのご予約をお願いいたします。</p>
+                </div>
+                <div class="facil-img">
+                    <img src="image/meeting.jpg" alt="ミーティングルーム">
+                </div>
+            </div>
+            <div class="facil-text-img">
+                <div class="facil-text">
+                    <h3>Caf&#233;</h3>
+                    <p>カフェの品物は全て無料で提供しております。豆からこだわったコーヒーやフレッシュスムージーなどお飲み物の他に、罪悪感なく食べられる白砂糖・小麦粉・乳製品不使用のヘルシーなパンやお菓子を取り揃えております。</p>
+                </div>
+                <div class="facil-img"><img src="image/food.jpg" alt="カフェ"></div>
+            </div>
+            <div class="facil-text-img">
+                <div class="facil-text">
+                    <h3>Shower room</h3>
+                    <p>シャワールームではロコシタン社のオーガニックシャンプーとトリートメント、ボディソープをご利用いただけます。その他アメニティとしてバスタオル、ドライヤー、ヘアアイロン、ヘアオイル、ヘアスプレー、スキンケア用品一式がございます。</p>
+                </div>
+                <div class="facil-img"><img src="image/bath.jpg" alt="シャワールーム"></div>
+            </div>
+            <div class="facil-text-img">
+                <div class="facil-text">
+                    <h3>Kids&#39; play space</h3>
+                    <p>防音対策に優れたキッズスペースでお子さまものびのび楽しめます。知的好奇心をくすぐる世界各国のおもちゃや絵本を取り揃えました。英語対応可能な保育士が常駐しておりますので安心してご利用ください。</p>
+                </div>
+                <div class="facil-img"><img src="image/kids_room.jpg" alt="キッズルーム"></div>
+            </div>
+            <div class="btn-box">
+                <a href="#join" class="btn js_h"><span class="normal">Join us<i class="fas fa-chevron-right"></i></span><span class="jp">会員登録<i class="fas fa-chevron-right"></i></span></a>
+            </div>
+        </div>
+        <!--User's voice-->
+        <div id="voice">
+            <h2>User&#39;s voice</h2>
+            <div class="voice-sub">
+                <div class="voice-sub-p">
+                    <p>99.9%</p>
+                    <p><span>の</span>会員<span>が</span>満足&#33;</p>
+                    <p>&#8251;会員2000名さまにアンケート</p>
+                    <p>2021年2月</p>
+                </div>
+            </div>
+            <div class="voice-box">
+                <div class="voice-text">
+                    <p>清潔で快適。コーヒーや軽食が美味しい。イベントも充実している。</p>
+                    <p>20代・IT会社勤務</p>
+                </div>
+                <div class="voice-text">
+                    <p>多様なバックグラウンドを持つ皆さんとの出会いが刺激になります。</p>
+                    <p>30代・会社代表</p>
+                </div>
+                <div class="voice-text">
+                    <p>ミーティングルームでワークショップを開催しました。また使用します。</p>
+                    <p>40代・コンサルタント</p>
+                </div>
+                <div class="voice-text">
+                    <p>朝のランニングの後、シャワーを浴びてそのまま仕事にとりかかれます。</p>
+                    <p>20代・通信会社勤務</p>
+                </div>
+                <div class="voice-text">
+                    <p>5才の娘はキッズスペースが大好きです。安心して仕事に取り組めます。</p>
+                    <p>30代・WEBディレクター</p>
+                </div>
+                <div class="voice-text">
+                    <p>雰囲気がよく、気づいたらいつもここにいる。まさに第二の家。</p>
+                    <p>50代・編集業</p>
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="#join" class="btn js_h"><span class="normal">Join us<i class="fas fa-chevron-right"></i></span><span class="jp">会員登録<i class="fas fa-chevron-right"></i></span></a>
+            </div>
+        </div>
+        <!--Awards-->
+        <div id="awards">
+            <h2>Awards</h2>
+            <div class="awards-img-text">
+                <div class="awards-img"><img src="image/award.png" alt="ナンバーワンコワーキングスペース"></div>
+                <div class="awards-text">
+                    <p><span><span>No.1 CO-WORKING SPACE&nbsp;</span><span>IN THE WORLD</span></span><span class="awards-sm">に選ばれました&#33;</span></p>
+                    <p class="awards-year">2020年</p>
+                    <ul>
+                        <li>CO-WORKING SPACE IN THE WORLD&nbsp;<br class="br-sp"><span class="no1">第1位</span></li>
+                        <li>楽大ベストコワーキングスペース&nbsp;<br class="br-sp"><span class="no1">第1位</span></li>
+                        <li><span>「日軽WOMAN」読者500人が選ぶ</span><span>シェアオフィス&nbsp;</span><br class="br-sp"><span class="no1">第1位</span></li>
+                        <li><span>30代女性が行きたい</span><span>コワーキングスペース&nbsp;</span><br class="br-sp"><span class="no1">第1位</span></li>
+                    </ul>
+                    <p class="awards-year">2019年</p>
+                    <ul>
+                        <li><span>「ことりくらぶ」ママに優しい</span><span>ワーキングスペース&nbsp;</span><br class="br-sp"><span class="no1">第1位</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="#join" class="btn js_h"><span class="normal">Join us<i class="fas fa-chevron-right"></i></span><span class="jp">会員登録<i class="fas fa-chevron-right"></i></span></a>
+            </div>
+        </div>
+        <!--Q&A-->
+        <div id="q">
+            <h2>Q&amp;A</h2>
+            <div class="q-box">
+                <div class="q-list">
+                    <details>
+                        <summary>会員資格を教えてください。</summary>18歳以上の女性の方にご利用いただけます。
+                    </details>
+                    <details>
+                        <summary>会費はいくらですか。</summary>入会金18,000円、月会費28,000円です。入会時に1年契約で入会金無料となります。
+                    </details>
+                    <details>
+                        <summary>休会は可能ですか。</summary>可能です。引き落とし日を含めて10日前までにお申し出ください。また、休会期間中は事務手数料として1ヶ月あたり1,000円のお支払いが必要です。
+                    </details>
+                    <details>
+                        <summary>施設使用料金を教えてください。</summary>ミーティングルームのみ使用時は1時間あたり2,000円を頂戴しております。事前にご予約をお願いいたします。
+                    </details>
+                    <details>
+                        <summary>営業時間を教えてください。</summary>年中無休で朝5時から夜23時まで営業しています。
+                    </details>
+                </div>
+            </div>
+        </div>
+        <!--Join us-->
+        <div id="join">
+            <h2>Join us</h2>
+            <form class="join-form" action="#">
+                <div>
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="your-name" required>
+                </div>
+                <div>
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="your-email" required>
+                </div>
+                <div class="join-policy">
+                    <label>
+                        <input type="checkbox" name="accept" id="policy" required>&nbsp;利用規約に同意する</label>
+                    <details>
+                        <summary>利用規約</summary>
+                        <p>第1条（会員）</p>
+                        <p>1. 「会員」とは、当社が定める手続に従い本規約に同意の上、入会の申し込みを行う個人をいいます。</p>
+                        <p>2. 「会員情報」とは、会員が当社に開示した会員の属性に関する情報および会員の取引に関する履歴等の情報をいいます。</p>
+                        <p>3. 本規約は、すべての会員に適用され、登録手続時および登録後にお守りいただく規約です。</p>
+                        <p>第2条（登録）</p>
+                        <p>1. 会員資格</p>
+                        <p>本規約に同意の上、所定の入会申込みをされたお客様は、所定の登録手続完了後に会員としての資格を有します。会員登録手続は、会員となるご本人が行ってください。代理による登録は一切認められません。なお、過去に会員資格が取り消された方やその他当社が相応しくないと判断した方からの会員申込はお断りする場合があります。</p>
+                        <p>2. 会員情報の入力</p>
+                        <p>会員登録手続の際には、入力上の注意をよく読み、所定の入力フォームに必要事項を正確に入力してください。会員情報の登録において、特殊記号・旧漢字・ローマ数字などはご使用になれません。これらの文字が登録された場合は当社にて変更致します。</p>
+                        <p>3. パスワードの管理</p>
+                        <p>(1)パスワードは会員本人のみが利用できるものとし、第三者に譲渡・貸与できないものとします。</p>
+                        <p>(2)パスワードは、他人に知られることがないよう定期的に変更する等、会員本人が責任をもって管理してください。</p>
+                        <p>(3)パスワードを用いて当社に対して行われた意思表示は、会員本人の意思表示とみなし、そのために生じる支払等はすべて会員の責任となります。</p>
+                        <p>第3条（変更）</p>
+                        <p>1. 会員は、氏名、住所など当社に届け出た事項に変更があった場合には、速やかに当社に連絡するものとします。</p>
+                        <p>2. 変更登録がなされなかったことにより生じた損害について、当社は一切責任を負いません。また、変更登録がなされた場合でも、変更登録前にすでに手続がなされた取引は、変更登録前の情報に基づいて行われますのでご注意ください。</p>
+                        <p>第4条（退会）</p>
+                        <p>会員が退会を希望する場合には、会員本人が退会手続きを行ってください。所定の退会手続の終了後に、退会となります。</p>
+                        <p>第5条（本規約の改定）</p>
+                        <p>当社は、本規約を任意に改定できるものとし、また、当社において本規約を補充する規約（以下「補充規約」といいます）を定めることができます。本規約の改定または補充は、改定後の本規約または補充規約を当社所定のサイトに掲示したときにその効力を生じるものとします。この場合、会員は、改定後の規約および補充規約に従うものと致します。</p>
+                        <p>第6条（準拠法、管轄裁判所）</p>
+                        <p>本規約に関して紛争が生じた場合、当社本店所在地を管轄する地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+                    </details>
+                </div>
+                <input type="submit" class="button" value="送信する">
+            </form>
+        </div>
+    </div>
+    <!--footer-->
+    <footer>
+        <p id="footer-add">〒812-0001&nbsp;&nbsp;<br class="br-sp">福岡県福岡市中央区天神1-1-1&nbsp;&nbsp;<br class="br-sp">西鉄天神駅より徒歩5分</p>
+        <p id="footer-tel">Tel: 0120-123-4567</p>
+        <div class="sns">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <p><small id="copyright">&copy; 2021 CASA</small></p>
+    </footer>
+    <script type="text/javascript" src="js/common.js"></script>
+</body></html>
